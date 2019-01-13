@@ -1,0 +1,97 @@
+header {
+    background-image: url(img/main.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+div.intro-heading{
+    color: #774b24ad;
+}
+@keyframes spin {
+  from{
+    transform: rotateY(0deg);
+    moz-transform: rotateY(0deg); //Firefox
+    ms-transform: rotateY(0deg); //Microsoft Browsers
+  }
+  to{
+    transform: rotateY(360deg);
+    moz-transform: rotateY(360deg); //Firefox
+    ms-transform: rotateY(360deg); //Microsoft Browsers
+  }
+}
+@-webkit-keyframes spin{
+  from{-webkit-transform: rotateY(0deg);}
+  to{-webkit-transform: rotateY(360deg);}
+}
+.imageSpin{
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  -webkit-animation-name: spin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+}
+.fp{
+    display: inherit;
+    margin: 5px;
+    color: black;
+}
+.fp:hover,.fp:focus,.fp:active{
+    color:blue;
+}
+.fs{
+    background:transparent;
+    padding:10px;
+    position:relative;
+    z-index:5;
+    overflow:hidden;
+    display:inline-block;
+    border:1px solid black;
+}
+.fs:hover{
+    background:none;
+    color:white;
+}
+
+.fs:before{
+    content:"";
+    position:absolute;
+    width:50%;
+    height:100%;
+    background:#008000b3;
+    top:0;
+    left:-50%;
+    transition:all 0.3s ease;
+    z-index:-5;
+}
+.fp:hover .fs:before{
+    left:0;
+}
+
+.fs:after{
+    content:"";
+    position:absolute;
+    width:50%;
+    height:100%;
+    background:#008000b3;
+    top:0;
+    right:-50%;
+    transition:all 0.3s ease;
+    z-index:-5;
+}
+.fp:hover .fs:after{
+    right:0;
+}
